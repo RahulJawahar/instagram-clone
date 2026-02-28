@@ -21,7 +21,7 @@ function Stories() {
         {Stories.length > 0 ?
         (
             Stories.map((story)=>(
-                <div className="mx-1" key={story.id} onClick={()=>(navigate(` /story/${story.id}/${tot}`))}>
+                <div className="mx-1" key={story.id} onClick={()=>(navigate(`/story/${story.id}/${tot}`))}>
                     <div className='gradient-border'>
                         <img  className="story-dp rounded-circle"src={story.user.profile_pic} alt="dp" />
                     </div>

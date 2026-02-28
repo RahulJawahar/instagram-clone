@@ -4,6 +4,8 @@ import { Link, useNavigate, useParams } from 'react-router-dom'
 function ViewStory() {
     const { id ,tot} = useParams();
     const [story, setStory] = useState(null);
+    const navigate=useNavigate();
+
 
     useEffect(() => {
         fetch(`http://localhost:3000/story/${id}`)
@@ -11,7 +13,6 @@ function ViewStory() {
             .then(data => setStory(data))
             .catch(err => console.log(err))
     }, [id]);
-    const navigate=useNavigate();
     if(id > tot || id<=0){
         navigate('/');
     }
